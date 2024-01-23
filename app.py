@@ -40,4 +40,7 @@ interface_image = gr.Interface(
     cache_examples=False,
 )
 
-gr.Interface(interface_image).queue().launch()
+gr.TabbedInterface(
+    [interface_image],
+    tab_names=['Image inference']
+).queue().launch()
